@@ -15,6 +15,8 @@ public class OrdemService {
         novaOrdem.local = ordem.local;
         novaOrdem.item = ordem.item;
 
+        novaOrdem.persist();
+
         return novaOrdem;
     }
 }
