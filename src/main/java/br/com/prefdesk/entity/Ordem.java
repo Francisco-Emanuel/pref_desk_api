@@ -1,7 +1,7 @@
 package br.com.prefdesk.entity;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
-import io.smallrye.common.constraint.NotNull;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 
@@ -9,12 +9,12 @@ import jakarta.persistence.Table;
 @Table(name="Ordem")
 public class Ordem  extends PanacheEntity{
 
-    @NotNull
+    @Column(nullable = false)
     public String titulo;
 
-    @NotNull
+    @Column(nullable = false)
     public String local;
 
-    @NotNull
+    @Column(nullable = false)
     public String item;
 }
